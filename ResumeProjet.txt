@@ -1,0 +1,20 @@
+----------------------------------------------------
+Titre : Résumé des tâches à réaliser et des idées
+Participants : Bouatit Nikola Pollino Antonio
+Date : 12.11.2021
+Version : 1.0
+----------------------------------------------------
+
+1. tester l'ajout du caractère "\n" pour enter automatique
+2. définir les fonctions (Ce sont des idées de fonctions, à discuter si on en ajoute ou en supprime):
+	- Saisie des valeurs (BN)
+	- Chronomètre (PA)
+	- Contrôle de la saisie (BN)
+	- Recommencer le programme (BN) 
+	- random (PA)
+
+3. Définir la gestion des tâches (qui s'occupe de quoi)
+4. Bibliothèques : 
+	- Saisie et contrôle
+	- Génération aléatoire
+	- Chrono
