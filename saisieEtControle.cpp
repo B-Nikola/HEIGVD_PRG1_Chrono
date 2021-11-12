@@ -1,0 +1,95 @@
+/*
+-----------------------------------------------------------------------------------
+Nom du fichier : saisieEtControle.cpp
+Nom du Labo : Chrono
+Auteur(s) : Bouattit Nikola
+Date creation : 12.11.2021
+Description :
+Remarque(s) : <TODO>
+Compilateur : Mingw-w64 g++ 11.2.0
+-----------------------------------------------------------------------------------
+*/
+
+using namespace std;
+
+#include "saisieEtControle.h"
+#include <iostream>
+#include <limits>
+
+
+
+int saisieUserInt(const int MIN,const int MAX,const string& MSG_ERREUR){
+   bool erreur ;
+   int saisie;
+   do {
+      // message et saisie
+      cout << "saisir une valeur entre  [" << MIN << " - " << MAX << "] : ";
+      cin >> saisie;
+
+      // vérification
+      erreur = cin.fail() or saisie < MIN or saisie > MAX;
+      if (erreur) {
+         cout << MSG_ERREUR << endl;
+         cin.clear();
+      }
+      // vider buffer
+      cin.ignore(numeric_limits<streamsize>::max(), '\n');
+   } while(erreur);
+   return saisie;
+}
+
+
+
+char saisieUserChar( const string& MESSAGE, const string& MSG_ERREUR){
+   bool erreur ;
+   char saisie;
+   do {
+      // message et saisie
+      cout << MESSAGE ;
+      cin >> saisie;
+
+      // vérification
+      erreur = cin.fail();
+      if (erreur) {
+         cout << MSG_ERREUR << endl;
+         cin.clear();
+      }
+      // vider buffer
+      cin.ignore(numeric_limits<streamsize>::max(), '\n');
+   } while(erreur);
+   return saisie;
+}
+
+char saisieUserChar(char limInferieur , char limSupperieur , const
+                    string& MESSAGE , const string& MSG_ERREUR){
+   bool erreur ;
+   char saisie;
+   do {
+      // message et saisie
+      cout << MESSAGE << limInferieur << " a " << limSupperieur << " : ";
+      cin >> saisie;
+
+      // vérification
+      erreur = cin.fail() or saisie < limInferieur or saisie > limSupperieur;
+      if (erreur) {
+         cout << MSG_ERREUR << endl;
+         cin.clear();
+      }
+      // vider buffer
+      cin.ignore(numeric_limits<streamsize>::max(), '\n');
+   } while(erreur);
+   return saisie;
+}
+
+bool saisieJeu(char comparateur){
+   char entreeUser;
+   cin >> entreeUser;
+   cin.clear();
+   // vider buffer
+   cin.ignore(numeric_limits<streamsize>::max(), '\n');
+   return entreeUser == comparateur;
+}
+
+bool controleChar(char entree, char comparateur){
+   return entree == comparateur;
+}

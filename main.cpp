@@ -24,14 +24,31 @@ Compilateur : Mingw-w64 g++ 11.1.0
 #include <iomanip>
 #include <limits>
 
+#include "saisieEtControle.h"
+
 #define VIDER_BUFFER cin.ignore(numeric_limits<streamsize>::max(), '\n')
 
 using namespace std;
 int main()
 {
-   <code>
+   const int NBPARTIEMIN = 0;
+   const int NBPARTIEMAX = 10;
+   const string MSGERREURSAISIE = "Veuillez saisir une valeur correcte";
+   cout << "Bienvenue dans ce jeu de saisie ou vos connaissances du clavier et vos"
+           " reflexes seront mis  rude epreuves ! \n\n";
+   do{
+      int nbPartie = saisieUserInt(NBPARTIEMIN,NBPARTIEMAX,MSGERREURSAISIE);
+      for (int i = 0; i < nbPartie; ++i) {
 
-      cout << "Presser ENTER pour quitter";
+
+
+      }
+
+   }while(controleChar(saisieUserChar("entrer 'o' pour recommencez : ",MSGERREURSAISIE),'o'));
+
+
+   cout << "Presser ENTER pour quitter";
    VIDER_BUFFER;
    return EXIT_SUCCESS;
 }
+
