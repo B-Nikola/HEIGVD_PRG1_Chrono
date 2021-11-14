@@ -1,13 +1,25 @@
-//
-// Created by nikol on 12.11.2021.
-//
+/*
+-----------------------------------------------------------------------------------
+Nom du fichier : saisieEtControle.h
+Nom du Labo : Labo 5 : reflex clavier
+Auteur(s) : Bouattit Nikola
+Date creation : 12.11.2021
+Description :
+               Ce fichier contient le prototype des fonctions contenue dans le
+               fichier saisieEtControle.cpp
+Remarque(s) :
+               les saisie utilisateur pris en charge sont detaille a chaque fonction
+
+Compilateur : Mingw-w64 g++ 11.1.0
+-----------------------------------------------------------------------------------
+*/
 
 #ifndef HEIGVD_PRG1_CHRONO_SAISIEETCONTROLE_H
 #define HEIGVD_PRG1_CHRONO_SAISIEETCONTROLE_H
 
 
 
-#include <string> // nécessaire pour gérer les message d'erreurs
+#include <string> // necessaire pour gérer les message d'erreurs
 
 /// Permet de faire une saisie user pour récupérer un INT
 /// \param MIN Valeur minimale comprise
@@ -37,7 +49,7 @@ char saisieUserChar(char limInferieur , char limSupperieur , const
 /// \return Booleen qui indique si l'utilisateur a eu juste
 bool saisieJeu(char comparateur);
 
-/// Compare deux char et retourne un bool
+/// Compare deux char et retourne un bool du résultat
 /// \param entree Premier terme de l'utilisateur
 /// \param comparateur Valeur a la quelle l'entree doit etre egale
 /// \return booleen de si le test réussis ou non

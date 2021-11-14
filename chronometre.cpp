@@ -40,7 +40,6 @@ double calculDeltaTemps() {
    else{
       tempsT1           = time    (NULL);
       deltaTemps        = difftime(tempsT1, tempsT0);
-      chronoDemarre     = 0;
       return deltaTemps;
    }
 }
