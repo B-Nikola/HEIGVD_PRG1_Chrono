@@ -1,32 +1,31 @@
 /*
 -----------------------------------------------------------------------------------
-Nom du fichier : <nom du fichier>.<xxx>
-Nom du labo : <nom du labo>
-Auteur(s) : <prénom> <nom>
-Date creation : <jj.mm.aaaa>
-Description : <à compléter>
-Remarque(s) : <à compléter>
+Nom du fichier : generateurAleatoire.h
+Nom du labo : Labo 5 : reflex clavier
+Auteur(s) : Pollino Antonio
+Date creation : 13.11.2021
+Description :
+               Ce fichier contient le prototype des fonctions concernant le
+               fichier generateurAleatoire.cpp.
+
+Remarque(s) :
 Compilateur : Mingw-w64 g++ 11.1.0
 -----------------------------------------------------------------------------------
 */
-#include <cstdlib>
-#include <iostream>
-#include <cmath>
-#include <iomanip>
-
-#define ERASE_BUFFER cin.ignore(numeric_limits<streamsize>::max(), '\n')
-
-using namespace std;
-int main()
-{
- <code>
-
- cout << "Presser ENTER pour quitter";
- ERASE_BUFFER;
- return EXIT_SUCCESS;
-}
 
 #ifndef HEIG_CHRONO_GENERATIONALEATOIRE_H
 #define HEIG_CHRONO_GENERATIONALEATOIRE_H
+
+/// générateur aléatoire de lettres minuscules
+/// \return lettres minuscules aléatoires
+char generateurLettreMinuscule();
+
+/// générateur aléatoire de lettres majuscules
+/// \return lettres majuscules aléatoires
+char generateurLettreMajuscule();
+
+/// générateur aléatoire de chiffres
+/// \return chiffres aléatoire
+int generateurChiffre();
 
 #endif //HEIG_CHRONO_GENERATIONALEATOIRE_H

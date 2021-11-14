@@ -1,28 +1,56 @@
 /*
 -----------------------------------------------------------------------------------
-Nom du fichier : <nom du fichier>.<xxx>
-Nom du labo : <nom du labo>
-Auteur(s) : <prénom> <nom>
-Date creation : <jj.mm.aaaa>
-Description : <à compléter>
-Remarque(s) : <à compléter>
+Nom du fichier : chronometre.cpp
+Nom du labo : Labo 5 : reflex clavier
+Auteur(s) : Pollino Antonio
+Date creation : 12.11.2021
+Description :
+               Ce fichier contient une fonction permettant de démarrer le
+               chronomètre, de l'arrêter et de récupérer le temps total écoulé,
+               ainsi qu'une fonction permettant de calculer le temps moyen écoulé.
+Remarque(s) :
+               La fonction calculTempsMoyen est strictement liée à la fonction
+               calculDeltaTemps et ne fonctionne pas sans cette dernière.
+
 Compilateur : Mingw-w64 g++ 11.1.0
 -----------------------------------------------------------------------------------
 */
-#include <cstdlib>
-#include <iostream>
-#include <cmath>
-#include <iomanip>
 
-#define ERASE_BUFFER cin.ignore(numeric_limits<streamsize>::max(), '\n')
+#include <iostream> //
+#include <ctime>    //
 
 using namespace std;
-int main()
-{
- <code>
 
- cout << "Presser ENTER pour quitter";
- ERASE_BUFFER;
- return EXIT_SUCCESS;
+time_t tempsT0;
+time_t tempsT1;
+bool   chronoDemarre;
+double deltaTemps;
+double tempsMoyen;
+
+void demarrageChrono() {
+     chronoDemarre      = 1;
+     tempsT0            = time(NULL);
 }
+
+double calculDeltaTemps() {
+   if (chronoDemarre   != 1){
+      cout << "Erreur : le chronometre n'a pas enregistre de temps" << endl;
+      return deltaTemps = 0;
+   }
+   else{
+      tempsT1           = time    (NULL);
+      deltaTemps        = difftime(tempsT1, tempsT0);
+      chronoDemarre     = 0;
+      return deltaTemps;
+   }
+}
+
+double calculTempsMoyen(double nbrElements) {
+   tempsMoyen           = calculDeltaTemps() / nbrElements;
+   return tempsMoyen;
+}
+
+
+
+
 

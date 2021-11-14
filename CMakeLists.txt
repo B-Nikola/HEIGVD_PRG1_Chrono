@@ -3,7 +3,5 @@ project(HEIGVD_PRG1_Chrono)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(HEIGVD_PRG1_Chrono main.cpp
-
-
-        saisieEtControle.cpp saisieEtControle.h)
+add_executable(HEIGVD_PRG1_Chrono main.cpp chronometre.cpp chronometre.h
+               generationAleatoire.cpp generationAleatoire.h saisieEtControle.cpp saisieEtControle.h)

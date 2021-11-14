@@ -1,32 +1,32 @@
 /*
 -----------------------------------------------------------------------------------
-Nom du fichier : <nom du fichier>.<xxx>
-Nom du labo : <nom du labo>
-Auteur(s) : <prénom> <nom>
-Date creation : <jj.mm.aaaa>
-Description : <à compléter>
-Remarque(s) : <à compléter>
+Nom du fichier : chronometre.h
+Nom du labo : Labo 5 : reflex clavier
+Auteur(s) : Pollino Antonio
+Date creation : 12.11.2021
+Description :
+               ce fichier contient les prototypes des fonctions contenues dans le
+               fichier chronometre.cpp.
+
+Remarque(s) :
 Compilateur : Mingw-w64 g++ 11.1.0
 -----------------------------------------------------------------------------------
 */
-#include <cstdlib>
-#include <iostream>
-#include <cmath>
-#include <iomanip>
-
-#define ERASE_BUFFER cin.ignore(numeric_limits<streamsize>::max(), '\n')
-
-using namespace std;
-int main()
-{
- <code>
-
- cout << "Presser ENTER pour quitter";
- ERASE_BUFFER;
- return EXIT_SUCCESS;
-}
 
 #ifndef HEIG_CHRONO_CHRONOMETRE_H
 #define HEIG_CHRONO_CHRONOMETRE_H
+
+/// fonction permettant de démarrer le chronomètre
+void demarrageChrono();
+
+/// fonction permettant de calculer la différence de temps
+/// \return la différence de temps
+double calculDeltaTemps();
+
+/// fonction permettant de calculer un temps moyen
+/// (obtenu avec la fonction calculDeltaTemps)
+/// \param nbrElements nombre d'éléments sur lesquels la moyenne est établie
+/// \return le temps moyen
+double calculTempsMoyen(double nbrElements);
 
 #endif //HEIG_CHRONO_CHRONOMETRE_H

@@ -23,7 +23,7 @@ int saisieUserInt(const int MIN,const int MAX,const string& MSG_ERREUR){
    int saisie;
    do {
       // message et saisie
-      cout << "saisir une valeur entre  [" << MIN << " - " << MAX << "] : ";
+      cout << "saisir une valeur entre  [" << MIN << " - " << MAX << "] :";
       cin >> saisie;
 
       // vérification
@@ -40,12 +40,12 @@ int saisieUserInt(const int MIN,const int MAX,const string& MSG_ERREUR){
 
 
 
-char saisieUserChar( const string& MESSAGE, const string& MSG_ERREUR){
+char saisieUserChar( const string& MESSAGE, const string& MSG_ERREUR) {
    bool erreur ;
    char saisie;
    do {
       // message et saisie
-      cout << MESSAGE ;
+      cout << MESSAGE;
       cin >> saisie;
 
       // vérification

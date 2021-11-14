@@ -9,11 +9,6 @@
 
 #include <string> // nécessaire pour gérer les message d'erreurs
 
-class saisieEtControle {
-
-};
-
-
 /// Permet de faire une saisie user pour récupérer un INT
 /// \param MIN Valeur minimale comprise
 /// \param MAX Valeur maximal comprise
