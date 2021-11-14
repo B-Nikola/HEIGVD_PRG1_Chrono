@@ -24,11 +24,11 @@ Remarque(s) :
 Compilateur : Mingw-w64 g++ 11.1.0
 -----------------------------------------------------------------------------------
 */
-#include <cstdlib>
-#include <iostream>
-#include <limits>
-#include <string>
-#include <iomanip>
+#include <cstdlib>   // Necessaire pour l'EXIT_SUCCESS
+#include <iostream>  // Necessaire pour l'écriture et la lecture dans la console
+#include <limits>    // Necessaire pour la gestion des limites max et vider le buffer
+#include <string>    // Necessaire pour la gestion des strings
+#include <iomanip>   // Necessaire pour limiter l'affichage
 
 #include "chronometre.h"
 #include "saisieEtControle.h"

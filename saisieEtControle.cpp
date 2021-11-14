@@ -1,11 +1,15 @@
 /*
 -----------------------------------------------------------------------------------
 Nom du fichier : saisieEtControle.cpp
-Nom du Labo : Chrono
+Nom du Labo : Labo 5 : reflex clavier
 Auteur(s) : Bouattit Nikola
 Date creation : 12.11.2021
 Description :
-Remarque(s) : <TODO>
+               Ce fichier sert a faire les vérifications d'entree user et aussis
+               la verification entre char
+Remarque(s) :
+               La saisie Jeu est special pour ce programme et n'est pas recommande
+               a etre utiliser dans un autre programme
 Compilateur : Mingw-w64 g++ 11.2.0
 -----------------------------------------------------------------------------------
 */
@@ -18,7 +22,7 @@ using namespace std;
 
 
 
-int saisieUserInt(const int MIN,const int MAX,const string& MSG_ERREUR){
+int saisieUserInt(const int MIN, const int MAX, const string& MSG_ERREUR){
    bool erreur ;
    int saisie;
    do {
