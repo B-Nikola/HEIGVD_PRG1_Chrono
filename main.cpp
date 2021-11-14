@@ -69,6 +69,7 @@ int main()
       }
 
       tempsJeu = calculDeltaTemps();
+
       cout << endl                                   << endl;
       cout << "nbre de reponses correctes : "        << compteurCorrect << endl
            << "temps ecoule "                        << setw(16)

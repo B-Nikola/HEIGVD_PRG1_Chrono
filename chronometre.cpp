@@ -28,8 +28,14 @@ double deltaTemps;
 double tempsMoyen;
 
 void demarrageChrono() {
-     chronoDemarre      = 1;
-     tempsT0            = time(NULL);
+   if (chronoDemarre == 1){
+      cout << "Erreur : le chronometre a deja demarre"              << endl;
+      return;
+   }
+   else {
+      chronoDemarre = 1;
+      tempsT0 = time(NULL);
+   }
 }
 
 double calculDeltaTemps() {
@@ -40,13 +46,13 @@ double calculDeltaTemps() {
    else{
       tempsT1           = time    (NULL);
       deltaTemps        = difftime(tempsT1, tempsT0);
-      chronoDemarre     = 0;
       return deltaTemps;
    }
 }
 
 double calculTempsMoyen(double nbrElements) {
    tempsMoyen           = calculDeltaTemps() / nbrElements;
+   chronoDemarre = 0;
    return tempsMoyen;
 }
 
